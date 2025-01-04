@@ -20,5 +20,23 @@ function getComputerChoice() {
     }
 }
 
+function getHumanChoice() {
+    let valid = false;
+    let answer = prompt("Scissors, paper or rock?").toLowerCase();
+    while (true) {
+        console.log(answer);
+        if (answer == "rock" ||
+            answer == "scissors" ||
+            answer == "paper")
+            return answer;
+        else {
+            answer = prompt("Not a valid answer, please try again.").toLowerCase();
+        }
+    }
+}
+
+console.log(getHumanChoice());
+
+
 
 
