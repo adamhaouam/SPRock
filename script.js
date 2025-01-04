@@ -9,7 +9,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 
-function getComputerChoice() { //return between "rock", "paper"
+function getComputerChoice() { //return between "rock", "paper" and "scissors"
     let roll = Math.random() * 3;
     if (roll < 1) {
         //rock += 1;
@@ -25,7 +25,7 @@ function getComputerChoice() { //return between "rock", "paper"
     }
 }
 
-function getHumanChoice() {
+function getHumanChoice() { // Retrieves choice from user, only allows "rock", "paper" and "scissors"
     let valid = false;
     let answer = prompt("Scissors, paper or rock?").toLowerCase();
     while (true) {
@@ -40,9 +40,9 @@ function getHumanChoice() {
     }
 }
 
-function playRound(humanChoice, computerChoice) {
-    //humanChoice = getHumanChoice();
-    humanChoice = "rock";
+function playRound(humanChoice, computerChoice) { //Requests choice, compares with computer choice, allocates win to score
+    humanChoice = getHumanChoice();
+    //humanChoice = "rock";
     computerChoice = getComputerChoice();
     if (humanChoice == computerChoice) {
         console.log("Tie!");
