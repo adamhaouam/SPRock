@@ -80,10 +80,8 @@ function playRound(humanChoice, computerChoice) { //Requests choice, compares wi
 } 
 
 
-/* TESTING
 
-for (let i = 0; i < 10000; i++) {
+for (let i = 0; i < 5; i++) {
     playRound();
 }
 console.log(`Your score: ${humanScore}, PC score: ${computerScore}`);
-*/
